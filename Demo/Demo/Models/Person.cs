@@ -22,8 +22,8 @@ public class Person(string firtname, string lastname)
 //    }
 //}
 
-public class Person
-{
-    public required string Name { get; init; }
-    public string? Phone { get; init; }
-}
+//public class Person
+//{
+//    public required string Name { get; init; }
+//    public string? Phone { get; init; }
+//}

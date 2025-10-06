@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp1\\mauiapp1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp1\\mauiapp1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp1\\mauiapp1\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp1\\mauiapp1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp1\\mauiapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FF6DF014-219E-470F-A4EB-2468D1BA26C7}|MauiApp1\\MauiApp1.csproj|solutionrelative:mauiapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MainPage.xaml",
+              "RelativeToolTip": "MauiApp1\\MainPage.xaml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T14:25:03.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MainPage.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T14:25:01.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\MauiProgram.cs",
+              "RelativeToolTip": "MauiApp1\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T14:24:22.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MauiApp1\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\App.xaml.cs",
+              "RelativeToolTip": "MauiApp1\\App.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T14:24:16.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\App.xaml",
+              "RelativeDocumentMoniker": "MauiApp1\\App.xaml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp1\\MauiApp1\\App.xaml",
+              "RelativeToolTip": "MauiApp1\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T14:24:13.608Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

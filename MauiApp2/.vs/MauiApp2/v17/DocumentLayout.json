@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA410702-1E48-40A4-A674-A189EAEE90E9}|MauiApp2\\MauiApp2.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp2\\mauiapp2\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA410702-1E48-40A4-A674-A189EAEE90E9}|MauiApp2\\MauiApp2.csproj|solutionrelative:mauiapp2\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA410702-1E48-40A4-A674-A189EAEE90E9}|MauiApp2\\MauiApp2.csproj|c:\\users\\admin\\desktop\\wpf\\mauiapp2\\mauiapp2\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA410702-1E48-40A4-A674-A189EAEE90E9}|MauiApp2\\MauiApp2.csproj|solutionrelative:mauiapp2\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp2\\MauiApp2\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "MauiApp2\\Components\\Pages\\Counter.razor",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp2\\MauiApp2\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "MauiApp2\\Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T14:26:13.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp2\\MauiApp2\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "MauiApp2\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\WPF\\MauiApp2\\MauiApp2\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "MauiApp2\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T14:26:05.708Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,10 +2,31 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+	  
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	  <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	  <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Product.cs" />
+  </ItemGroup>
+
+	
+	
+	
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LibraryManager.Legacy\LibraryManager.csproj" />
+	  
+  </ItemGroup>
 
 </Project>
