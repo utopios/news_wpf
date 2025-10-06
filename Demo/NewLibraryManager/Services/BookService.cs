@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using LibraryManager.Models;
+﻿
+using LibraryManager.Modern.Models;
 
-namespace LibraryManager.Services
+namespace LibraryManager.Modern.Services
 {
     public interface IBookService
     {
@@ -29,23 +27,21 @@ namespace LibraryManager.Services
             InitializeSampleData();
         }
 
-        private void InitializeSampleData()
-        {
-            _books.Add(new (1, "Le Seigneur des Anneaux", "J.R.R. Tolkien", "978-2-07-061332-8",
-                BookCategory.Fiction, BookStatus.Available, new DateTime(1954, 7, 29), 5, 3));
-            
-            _books.Add(new Book(2, "1984", "George Orwell", "978-0-452-28423-4",
-                BookCategory.Fiction, BookStatus.Borrowed, new DateTime(1949, 6, 8), 3, 0));
-            
-            _books.Add(new Book(3, "Une brève histoire du temps", "Stephen Hawking", "978-2-08-081238-4",
-                BookCategory.Science, BookStatus.Available, new DateTime(1988, 4, 1), 2, 2));
-            
-            _books.Add(new Book(4, "Sapiens", "Yuval Noah Harari", "978-2-226-25701-7",
-                BookCategory.History, BookStatus.Available, new DateTime(2011, 1, 1), 4, 4));
-            
-            _books.Add(new Book(5, "Harry Potter à l'école des sorciers", "J.K. Rowling", "978-2-07-054127-3",
-                BookCategory.Children, BookStatus.Reserved, new DateTime(1997, 6, 26), 8, 0));
-        }
+        private static List<Book> InitializeSampleData() => [
+            new (1, "Le Seigneur des Anneaux", "J.R.R. Tolkien", "978-2-07-061332-8",
+                BookCategory.Fiction, BookStatus.Available, new DateTime(1954, 7, 29), 5, 3),
+            new(2, "1984", "George Orwell", "978-0-452-28423-4",
+            BookCategory.Fiction, BookStatus.Borrowed, new(1949, 6, 8), 3, 0),
+
+        new(3, "Une brève histoire du temps", "Stephen Hawking", "978-2-08-081238-4",
+            BookCategory.Science, BookStatus.Available, new(1988, 4, 1), 2, 2),
+
+        new(4, "Sapiens", "Yuval Noah Harari", "978-2-226-25701-7",
+            BookCategory.History, BookStatus.Available, new(2011, 1, 1), 4, 4),
+
+        new(5, "Harry Potter à l'école des sorciers", "J.K. Rowling", "978-2-07-054127-3",
+            BookCategory.Children, BookStatus.Reserved, new(1997, 6, 26), 8, 0)
+            ];
 
         public List<Book> GetAllBooks()
         {
@@ -99,7 +95,7 @@ namespace LibraryManager.Services
             List<Book> results = new List<Book>();
             foreach (var book in _books)
             {
-                if (book.IsAvailable())
+                if (book.IsAvailable)
                     results.Add(book);
             }
             return results;
@@ -116,9 +112,9 @@ namespace LibraryManager.Services
                 if (b.Id > maxId)
                     maxId = b.Id;
             }
-            book.Id = maxId + 1;
+            //book.Id = maxId + 1;
 
-            _books.Add(book);
+            _books.Add(book with { Id = maxId + 1});
             return true;
         }
 
@@ -154,12 +150,24 @@ namespace LibraryManager.Services
         public bool BorrowBook(int bookId)
         {
             Book book = GetBookById(bookId);
-            if (book == null || !book.IsAvailable())
+            if (book == null || !book.IsAvailable)
                 return false;
 
-            book.AvailableCopies = book.AvailableCopies - 1;
-            if (book.AvailableCopies == 0)
-                book.Status = BookStatus.Borrowed;
+            //book.AvailableCopies = book.AvailableCopies - 1;
+            //if (book.AvailableCopies == 0)
+            //    book.Status = BookStatus.Borrowed;
+
+            var updatedBook = book with
+            {
+                AvailableCopies = book.AvailableCopies - 1,
+                Status = book.AvailableCopies - 1 == 0 ? BookStatus.Borrowed
+                : book.Status
+            };
+
+            var index = _books.FindIndex(book => book.Id == bookId);
+            if(index >= 0)
+                _books[index] = updatedBook;
+
 
             return true;
         }
@@ -167,12 +175,18 @@ namespace LibraryManager.Services
         public bool ReturnBook(int bookId)
         {
             Book book = GetBookById(bookId);
-            if (book == null)
+            if (book == null || !book.IsAvailable)
                 return false;
 
-            book.AvailableCopies = book.AvailableCopies + 1;
-            if (book.AvailableCopies > 0)
-                book.Status = BookStatus.Available;
+            var updatedBook = book with
+            {
+                AvailableCopies = book.AvailableCopies + 1,
+                Status =  BookStatus.Available
+            };
+
+            var index = _books.FindIndex(book => book.Id == bookId);
+            if (index >= 0)
+                _books[index] = updatedBook;
 
             return true;
         }

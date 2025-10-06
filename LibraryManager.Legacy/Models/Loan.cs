@@ -104,19 +104,21 @@ namespace LibraryManager.Models
             if (_status != LoanStatus.Overdue && _status != LoanStatus.Active)
                 return 0;
 
-            DateTime compareDate;
-            if (_returnDate.HasValue)
-                compareDate = _returnDate.Value;
-            else
-                compareDate = DateTime.Now;
+            //DateTime compareDate;
+            //if (_returnDate.HasValue)
+            //    compareDate = _returnDate.Value;
+            //else
+            //    compareDate = DateTime.Now;
 
-            if (compareDate > _dueDate)
-            {
-                TimeSpan difference = compareDate - _dueDate;
-                return difference.Days;
-            }
+            //if (compareDate > _dueDate)
+            //{
+            //    TimeSpan difference = compareDate - _dueDate;
+            //    return difference.Days;
+            //}
 
-            return 0;
+            //return 0;
+            var compareDate = ReturnDate ?? DateTime.Now;
+            return compareDate > DueDate ? (compareDate - DueDate).Days : 0;
         }
 
         public decimal CalculatePenalty()
