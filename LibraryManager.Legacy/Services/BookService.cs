@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using LibraryManager.Models;
 
 namespace LibraryManager.Services
@@ -27,6 +29,9 @@ namespace LibraryManager.Services
         {
             _books = new List<Book>();
             InitializeSampleData();
+
+           
+            
         }
 
         private void InitializeSampleData()
@@ -47,9 +52,24 @@ namespace LibraryManager.Services
                 BookCategory.Children, BookStatus.Reserved, new DateTime(1997, 6, 26), 8, 0));
         }
 
+        //Refactor en async
         public List<Book> GetAllBooks()
         {
             return new List<Book>(_books);
+        }
+
+        public Task<List<Book>> GetAllBooksAsync()
+        {
+
+            var task = Task.Run(() =>
+            {
+                Thread.CurrentThread.Priority = ThreadPriority.Highest;
+                var books = new List<Book>();
+                
+                return books;
+            });
+
+            return Task.FromResult<List<Book>>([.._books]);
         }
 
         public Book GetBookById(int id)
