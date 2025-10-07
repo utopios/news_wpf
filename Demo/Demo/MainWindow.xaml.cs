@@ -17,10 +17,12 @@ namespace Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        IServiceProvider _serviceProvider;
+        public MainWindow(IServiceProvider serviceProvider)
         {
             InitializeComponent();
             DataContext = new MainViewModel();
+            _serviceProvider = serviceProvider;
         }
     }
 }
