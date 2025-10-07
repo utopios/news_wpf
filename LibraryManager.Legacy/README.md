@@ -62,4 +62,10 @@ Moderniser ce code vers C# 13 / .NET 9 en utilisant:
 
 Voir le fichier `TP_Refactoring_WPF.md` pour les instructions détaillées.
 
+## Modifier les méthodes des services pour qu'elles deviennent async.
 
+## Ajouter le CD et IoC
+
+## Ajouter une gestion centralisée des logs 
+
+## Ajouter une gestion centralisée des exceptions

@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Demo.ViewModels;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace Demo
 {
@@ -18,11 +20,17 @@ namespace Demo
     public partial class MainWindow : Window
     {
         IServiceProvider _serviceProvider;
-        public MainWindow(IServiceProvider serviceProvider)
+        IConfiguration _configuration;
+        readonly ILogger<MainWindow> _logger;
+        public MainWindow(IServiceProvider serviceProvider, IConfiguration configuration, ILogger<MainWindow> logger)
         {
             InitializeComponent();
             DataContext = new MainViewModel();
             _serviceProvider = serviceProvider;
+            _configuration = configuration;
+            var applicationName = _configuration["AppSettings:ApplicationName"];
+            _logger = logger;
+            
         }
     }
 }
