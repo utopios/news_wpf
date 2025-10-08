@@ -8,7 +8,7 @@ dotnet ef dbcontext scaffold \
 "Server=localhost;Port=3306;Database=demo_db;User=demo_user;Password=demo_pwd;" \
 Pomelo.EntityFrameworkCore.MySql \
 --output-dir Models \
---context DemoContext \
+--context ApplicationDbContext \
 --force
 
 ```
