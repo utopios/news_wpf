@@ -1,0 +1,189 @@
+stages:
+  - build
+  - test
+  - package
+  - publish
+
+variables:
+  DOTNET_VERSION: "8.0.x"
+  NUGET_PACKAGES_DIRECTORY: ".nuget"
+  ARTIFACTS_DIR: "artifacts"
+  SOLUTION_FILE: "MonSolution.sln"
+  WPF_PROJECT: "src/MonApp.WPF/MonApp.WPF.csproj"
+  PACKAGE_PROJECT: "src/MonApp.Package/MonApp.Package.wapproj"
+
+# Cache pour accélérer les builds
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - ${NUGET_PACKAGES_DIRECTORY}
+    - "**/obj"
+
+# ========================================
+# STAGE 1 : BUILD
+# ========================================
+
+build:
+  stage: build
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  script:
+    - echo "🔧 Restauration des dépendances..."
+    - dotnet restore ${SOLUTION_FILE}
+    
+    - echo "🏗️ Build de la solution..."
+    - dotnet build ${SOLUTION_FILE} --configuration Release --no-restore
+    
+    - echo "✅ Build terminé!"
+  artifacts:
+    paths:
+      - "**/bin/Release"
+      - "**/obj/Release"
+    expire_in: 1 hour
+  only:
+    - branches
+    - tags
+
+# ========================================
+# STAGE 2 : TESTS
+# ========================================
+
+test:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  dependencies:
+    - build
+  script:
+    - echo "🧪 Exécution des tests..."
+    - dotnet test ${SOLUTION_FILE} --configuration Release --no-build --logger "trx;LogFileName=test-results.trx" --results-directory ${ARTIFACTS_DIR}/tests
+    
+    - echo "📊 Génération du rapport de couverture..."
+    - dotnet test ${SOLUTION_FILE} --configuration Release --no-build --collect:"XPlat Code Coverage" --results-directory ${ARTIFACTS_DIR}/coverage
+  artifacts:
+    when: always
+    paths:
+      - ${ARTIFACTS_DIR}/tests/
+      - ${ARTIFACTS_DIR}/coverage/
+    reports:
+      junit:
+        - ${ARTIFACTS_DIR}/tests/*.trx
+    expire_in: 30 days
+  only:
+    - branches
+    - tags
+
+# ========================================
+# STAGE 3 : PACKAGE NUGET
+# ========================================
+
+package-nuget:
+  stage: package
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  dependencies:
+    - build
+  script:
+    - echo "📦 Création des packages NuGet..."
+    
+    # Pack de tous les projets de librairies
+    - |
+      for project in src/**/*.csproj; do
+        if [[ ! "$project" =~ "WPF" ]] && [[ ! "$project" =~ "Package" ]]; then
+          echo "📦 Package: $project"
+          dotnet pack "$project" --configuration Release --no-build --output ${ARTIFACTS_DIR}/nuget
+        fi
+      done
+    
+    - echo "✅ Packages NuGet créés!"
+  artifacts:
+    paths:
+      - ${ARTIFACTS_DIR}/nuget/*.nupkg
+      - ${ARTIFACTS_DIR}/nuget/*.snupkg
+    expire_in: 30 days
+  only:
+    - main
+    - develop
+    - tags
+
+# ========================================
+# STAGE 4 : BUILD MSIX (Windows uniquement)
+# ========================================
+
+build-msix:
+  stage: package
+  tags:
+    - windows  # Nécessite un runner Windows
+  dependencies:
+    - build
+  before_script:
+    # Restaurer le certificat depuis les variables CI
+    - |
+      $certPath = "certificate.pfx"
+      $certBytes = [System.Convert]::FromBase64String($env:CERTIFICATE_BASE64)
+      [System.IO.File]::WriteAllBytes($certPath, $certBytes)
+      
+      # Importer le certificat
+      $securePassword = ConvertTo-SecureString $env:CERTIFICATE_PASSWORD -AsPlainText -Force
+      Import-PfxCertificate -FilePath $certPath -CertStoreLocation Cert:\CurrentUser\My -Password $securePassword
+      
+    - echo "📦 Certificat importé"
+  script:
+    - echo "🏗️ Build du package MSIX..."
+    
+    # Incrémenter la version basée sur le numéro de pipeline
+    - |
+      $version = "1.0.$env:CI_PIPELINE_IID.0"
+      echo "Version: $version"
+    
+    # Build avec MSBuild (requis pour MSIX)
+    - |
+      & "C:\Program Files\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" `
+        ${env:PACKAGE_PROJECT} `
+        /p:Configuration=Release `
+        /p:Platform=x64 `
+        /p:UapAppxPackageBuildMode=SideloadOnly `
+        /p:AppxBundle=Always `
+        /p:AppxPackageDir="${env:ARTIFACTS_DIR}\msix\" `
+        /p:AppxPackageSigningEnabled=true `
+        /p:PackageCertificateKeyFile="certificate.pfx" `
+        /p:PackageCertificatePassword="${env:CERTIFICATE_PASSWORD}" `
+        /p:ApplicationVersion="$version"
+    
+    - echo "✅ Package MSIX créé!"
+  artifacts:
+    paths:
+      - ${ARTIFACTS_DIR}/msix/**/*.msix
+      - ${ARTIFACTS_DIR}/msix/**/*.msixbundle
+      - ${ARTIFACTS_DIR}/msix/**/*.cer
+    expire_in: 30 days
+  only:
+    - main
+    - tags
+  after_script:
+    # Nettoyer le certificat
+    - Remove-Item certificate.pfx -ErrorAction SilentlyContinue
+
+# ========================================
+# STAGE 5 : PUBLICATION NUGET
+# ========================================
+
+publish-nuget:
+  stage: publish
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  dependencies:
+    - package-nuget
+  script:
+    - echo "📤 Publication des packages NuGet sur GitLab..."
+    
+    - |
+      for package in ${ARTIFACTS_DIR}/nuget/*.nupkg; do
+        echo "📤 Publication de $(basename $package)..."
+        dotnet nuget push "$package" \
+          --source "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/nuget/index.json" \
+          --api-key "${CI_JOB_TOKEN}" \
+          --skip-duplicate
+      done
+    
+    - echo "✅ Packages publiés sur GitLab!"
+  only:
+    - main
+    - tags
+  when: manual
