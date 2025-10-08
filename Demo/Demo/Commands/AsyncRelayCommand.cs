@@ -1,4 +1,5 @@
 using System.Windows.Input;
+using Microsoft.Extensions.Logging;
 
 public class AsyncRelayCommand : ICommand
 {

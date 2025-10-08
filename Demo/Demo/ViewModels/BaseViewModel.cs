@@ -66,13 +66,14 @@ public abstract class BaseViewModel : INotifyPropertyChanged
 
     protected string ObtenirMessageUtilisateur(Exception ex)
     {
-        return ex switch
-        {
-            ValidationException => ex.Message,
-            UnauthorizedAccessException => "Vous n'avez pas les droits nécessaires.",
-            HttpRequestException => "Erreur de connexion au serveur.",
-            _ => "Une erreur inattendue s'est produite."
-        };
+        //return ex switch
+        //{
+        //    ValidationException => ex.Message,
+        //    UnauthorizedAccessException => "Vous n'avez pas les droits nécessaires.",
+        //    HttpRequestException => "Erreur de connexion au serveur.",
+        //    _ => "Une erreur inattendue s'est produite."
+        //};
+        return null;
     }
 
     // INotifyPropertyChanged
