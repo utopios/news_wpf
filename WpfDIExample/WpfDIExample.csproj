@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+	  <StartupObject>WpfDIExample.App</StartupObject>
+
+	  <AssemblyTitle>Mon Application WPF</AssemblyTitle>
+	  <Description>Une super application</Description>
+	  <Company>Ma Société</Company>
+	  <Product>Mon Produit</Product>
+	  <Copyright>Copyright © 2025 Ma Société</Copyright>
+
+	  <AssemblyVersion>1.2.3.0</AssemblyVersion>
+	  <FileVersion>1.2.3.0</FileVersion>
+	  <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	  <PackageId>utopios.lib</PackageId>
+	  <Version>1.2.3</Version>
+	  <!-- ou géré par tag CI -->
+	  <Authors>UTOPIOS</Authors>
+	  <Description>Awesome library</Description>
+	  
+	  <!-- Pour COM interop si nécessaire -->
+	  <ComVisible>false</ComVisible>
+	  <Guid>12345678-1234-1234-1234-123456789012</Guid>
+    <UserSecretsId>2d924e1e-4841-4006-a3f4-35b8c3b95a23</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Packages pour l'injection de dépendances -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    
+    <!-- Package MVVM Toolkit (optionnel mais recommandé) -->
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- S'assurer que appsettings.json est copié dans le répertoire de sortie -->
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+	<!--<configuration>
+		<packageSources>
+			<add key="artifactory" value="https:///artifactory/api/nuget/nuget-local" />
+  
+		</packageSources>
+		<packageSourceCredentials>
+			<artifactory>
+				<add key="Username" value="dd" />
+				<add key="ClearTextPassword" value="" />
+			</artifactory>
+		</packageSourceCredentials>
+	</configuration>-->
+
+</Project>

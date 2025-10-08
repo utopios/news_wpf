@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Downloads\\WpfDIExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\logginginterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\logginginterceptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\logexecutionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\logexecutionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\services\\applicationinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:services\\applicationinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|c:\\users\\admin\\downloads\\wpfdiexample\\wpfdiexample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8A111B78-407D-533A-AE0A-61ECA471260A}|WpfDIExample.csproj|solutionrelative:wpfdiexample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:22:44.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:22:35.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Services\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:21:55.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoggingInterceptor.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\LoggingInterceptor.cs",
+              "RelativeDocumentMoniker": "Services\\LoggingInterceptor.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\LoggingInterceptor.cs",
+              "RelativeToolTip": "Services\\LoggingInterceptor.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwEoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:19:07.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogExecutionAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\LogExecutionAttribute.cs",
+              "RelativeDocumentMoniker": "Services\\LogExecutionAttribute.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\LogExecutionAttribute.cs",
+              "RelativeToolTip": "Services\\LogExecutionAttribute.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:18:11.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwDsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:16:45.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationInfoService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\ApplicationInfoService.cs",
+              "RelativeDocumentMoniker": "Services\\ApplicationInfoService.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\Services\\ApplicationInfoService.cs",
+              "RelativeToolTip": "Services\\ApplicationInfoService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwCwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:16:02.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WpfDIExample",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\WpfDIExample\\WpfDIExample.csproj",
+              "RelativeDocumentMoniker": "WpfDIExample.csproj",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\WpfDIExample\\WpfDIExample.csproj",
+              "RelativeToolTip": "WpfDIExample.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-08T06:06:20.913Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
